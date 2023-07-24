@@ -198,34 +198,35 @@ function checkOutcomes() {
 
 
 document.addEventListener('keydown', (e) => {
-    switch (e.key) {
-        case 'ArrowUp':
-            frogPos.y--;
-            break;
-        case 'ArrowDown':
-            frogPos.y++;
-            break;
-        case 'ArrowLeft':
-            frogPos.x--;
-            break;
-        case 'ArrowRight':
-            frogPos.x++;
-            break;
-    }
+    if (gameRunning) { //fixes frog moving when paused
+        switch (e.key) {
+            case 'ArrowUp':
+                frogPos.y--;
+                break;
+            case 'ArrowDown':
+                frogPos.y++;
+                break;
+            case 'ArrowLeft':
+                frogPos.x--;
+                break;
+            case 'ArrowRight':
+                frogPos.x++;
+                break;
+        }
 
-    if (frogPos.y < 0) {
-        frogPos.y = 0;
-        popUp("Congratulations! You won!");
-        frogPos = { x: 7, y: 14 };  // Reset frog position after winning
-        levelUp();
+        if (frogPos.y < 0) {
+            frogPos.y = 0;
+            popUp("Congratulations! You won!");
+            frogPos = { x: 7, y: 14 };  // Reset frog position after winning
+            levelUp();
+        }
+        if (frogPos.y < 0) frogPos.y = 0;
+        if (frogPos.y >= boardSize) frogPos.y = boardSize - 1;
+        if (frogPos.x < 0) frogPos.x = 0;
+        if (frogPos.x >= boardSize) frogPos.x = boardSize - 1;
+        checkOutcomes();
+        updateGameBoard();
     }
-    if (frogPos.y < 0) frogPos.y = 0;
-    if (frogPos.y >= boardSize) frogPos.y = boardSize - 1;
-    if (frogPos.x < 0) frogPos.x = 0;
-    if (frogPos.x >= boardSize) frogPos.x = boardSize - 1;
-    checkOutcomes();
-    updateGameBoard();
-
 });
 createGameBoard();
 updateGameBoard();
