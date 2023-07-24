@@ -11,6 +11,7 @@ let intervalTime = 1000;
 let startPauseButton = document.getElementById('start-pause-button');
 startPauseButton.addEventListener('click', startPauseGame);
 
+
 let cars = [
     { x: 1, y: 10, img: '../images/car1.png' },
     { x: 3, y: 10, img: '../images/car2.png' },
@@ -80,6 +81,17 @@ let water = [
     { x: 12, y: 5 },
 ];
 
+let frogs = [
+    { id: 1, img: '../images/frog1.png' },
+    { id: 2, img: '../images/frog2.jpg' },
+    { id: 3, img: '../images/frog3.jpg' },
+    { id: 4, img: '../images/frog4.jpg' },
+];
+
+let selectedFrogId = parseInt(prompt("Please select a frog (enter 1, 2, 3 or 4):"));
+let selectedFrog = frogs.find(frog => frog.id === selectedFrogId);
+
+
 function popUp(title) {
     Swal.fire({
         title: title,
@@ -121,7 +133,7 @@ function updateGameBoard() {
 
             if (i == frogPos.y && j == frogPos.x) {
                 let img = document.createElement('img');
-                img.src = '../images/frog1.png';
+                img.src = selectedFrog.img;
                 cell.appendChild(img);
             }
 
