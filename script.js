@@ -12,53 +12,53 @@ let startPauseButton = document.getElementById('start-pause-button');
 startPauseButton.addEventListener('click', startPauseGame);
 
 let cars = [
-    { x: 1, y: 10 },
-    { x: 3, y: 10 },
-    { x: 4, y: 10 },
-    { x: 8, y: 10 },
-    { x: 10, y: 10 },
-    { x: 2, y: 9 },
-    { x: 4, y: 9 },
-    { x: 7, y: 9 },
-    { x: 11, y: 9 },
-    { x: 12, y: 9 },
-    { x: 0, y: 8 },
-    { x: 3, y: 8 },
-    { x: 6, y: 8 },
-    { x: 9, y: 8 }
+    { x: 1, y: 10, img: '../images/car1.png' },
+    { x: 3, y: 10, img: '../images/car2.png' },
+    { x: 4, y: 10, img: '../images/car3.png' },
+    { x: 8, y: 10, img: '../images/car4.png' },
+    { x: 10, y: 10, img: '../images/car5.png' },
+    { x: 2, y: 9, img: '../images/car1.png' },
+    { x: 4, y: 9, img: '../images/car2.png' },
+    { x: 7, y: 9, img: '../images/car3.png' },
+    { x: 11, y: 9, img: '../images/car4.png' },
+    { x: 12, y: 9, img: '../images/car5.png' },
+    { x: 0, y: 8, img: '../images/car1.png' },
+    { x: 3, y: 8, img: '../images/car2.png' },
+    { x: 6, y: 8, img: '../images/car3.png' },
+    { x: 9, y: 8, img: '../images/car4.png' }
 ];
 
 // Add a birds array
 let birds = [
-    { x: 1, y: 3, counter: 0 },
-    { x: 4, y: 3, counter: 0 },
-    { x: 5, y: 3, counter: 0 },
-    { x: 8, y: 3, counter: 0 },
-    { x: 10, y: 3, counter: 0 },
-    { x: 12, y: 3, counter: 0 },
-    { x: 2, y: 2, counter: 0 },
-    { x: 3, y: 2, counter: 0 },
-    { x: 5, y: 2, counter: 0 },
-    { x: 6, y: 2, counter: 0 },
-    { x: 8, y: 2, counter: 0 },
-    { x: 9, y: 2, counter: 0 }
+    { x: 1, y: 3, counter: 0, img: '../images/bird1.jpg' },
+    { x: 4, y: 3, counter: 0, img: '../images/bird1.jpg' },
+    { x: 5, y: 3, counter: 0, img: '../images/bird2.jpg' },
+    { x: 8, y: 3, counter: 0, img: '../images/bird1.jpg' },
+    { x: 10, y: 3, counter: 0, img: '../images/bird1.jpg' },
+    { x: 12, y: 3, counter: 0, img: '../images/bird2.jpg' },
+    { x: 2, y: 2, counter: 0, img: '../images/bird1.jpg' },
+    { x: 3, y: 2, counter: 0, img: '../images/bird2.jpg' },
+    { x: 5, y: 2, counter: 0, img: '../images/bird2.jpg' },
+    { x: 6, y: 2, counter: 0, img: '../images/bird2.jpg' },
+    { x: 8, y: 2, counter: 0, img: '../images/bird1.jpg' },
+    { x: 9, y: 2, counter: 0, img: '../images/bird1.jpg' }
 ];
 
 // Add a logs array
 let logs = [
-    { x: 1, y: 6 },
-    { x: 2, y: 6 },
-    { x: 3, y: 6 },
-    { x: 7, y: 6 },
-    { x: 8, y: 6 },
-    { x: 9, y: 6 },
+    { x: 1, y: 6, img: '../images/log.jpg' },
+    { x: 2, y: 6, img: '../images/log.jpg' },
+    { x: 3, y: 6, img: '../images/log.jpg' },
+    { x: 7, y: 6, img: '../images/log.jpg' },
+    { x: 8, y: 6, img: '../images/log.jpg' },
+    { x: 9, y: 6, img: '../images/log.jpg' },
 
-    { x: 2, y: 5 },
-    { x: 3, y: 5 },
-    { x: 4, y: 5 },
-    { x: 8, y: 5 },
-    { x: 9, y: 5 },
-    { x: 10, y: 5 }
+    { x: 2, y: 5, img: '../images/log1.png' },
+    { x: 3, y: 5, img: '../images/log1.png' },
+    { x: 4, y: 5, img: '../images/log1.png' },
+    { x: 8, y: 5, img: '../images/log1.png' },
+    { x: 9, y: 5, img: '../images/log1.png' },
+    { x: 10, y: 5, img: '../images/log1.png' }
 ];
 
 // Add a water array
@@ -128,7 +128,7 @@ function updateGameBoard() {
             for (let car of cars) {
                 if (i == car.y && j == car.x) {
                     let img = document.createElement('img');
-                    img.src = '../images/car1.png';
+                    img.src = car.img;
                     cell.appendChild(img);
                 }
             }
@@ -137,7 +137,7 @@ function updateGameBoard() {
             for (let bird of birds) {
                 if (i == bird.y && j == bird.x) {
                     let img = document.createElement('img');
-                    img.src = '../images/bird1.jpg';
+                    img.src = bird.img;
                     cell.appendChild(img);
                 }
             }
@@ -145,7 +145,7 @@ function updateGameBoard() {
             for (let log of logs) {
                 if (i == log.y && j == log.x) {
                     let img = document.createElement('img');
-                    img.src = '../images/log.jpg';
+                    img.src = log.img;
                     cell.appendChild(img);
                 }
             }
