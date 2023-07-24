@@ -4,6 +4,8 @@ let boardSize = 13;
 let frogPos = { x: 6, y: 12 };
 let intervalID;
 let gameRunning = false;
+let level = 1; // add level
+let intervalTime = 1000;
 
 let startPauseButton = document.getElementById('start-pause-button');
 startPauseButton.addEventListener('click', startPauseGame);
@@ -75,10 +77,23 @@ let water = [
     { x: 7, y: 5 },
     { x: 11, y: 5 },
     { x: 12, y: 5 },
-
-
-
 ];
+
+function popUp(title) {
+    Swal.fire({
+        title: title,
+        width: 600,
+        padding: '3em',
+        color: '#716add',
+        background: '#fff url(/images/trees.png)',
+        backdrop: `
+            rgba(0,0,123,0.4)
+            url("/images/nyan-cat.gif")
+            left top
+            no-repeat
+        `
+    });
+}
 
 function createGameBoard() {
     let gameBoard = document.getElementById('game-board');
@@ -162,20 +177,9 @@ document.addEventListener('keydown', (e) => {
 
     if (frogPos.y < 0) {
         frogPos.y = 0;
-        Swal.fire({
-            title: 'Congratulations! You won!',
-            width: 600,
-            padding: '3em',
-            color: '#716add',
-            background: '#fff url(/images/trees.png)',
-            backdrop: `
-                rgba(0,0,123,0.4)
-                url("/images/nyan-cat.gif")
-                left top
-                no-repeat
-            `
-        });
+        popUp("Congratulations! You won!");
         frogPos = { x: 7, y: 14 };  // Reset frog position after winning
+        levelUp();
     }
     if (frogPos.y < 0) frogPos.y = 0;
     if (frogPos.y >= boardSize) frogPos.y = boardSize - 1;
@@ -184,19 +188,7 @@ document.addEventListener('keydown', (e) => {
 
     for (let car of cars) {
         if (car.x == frogPos.x && car.y == frogPos.y) {
-            Swal.fire({
-                title: 'Game Over!',
-                width: 600,
-                padding: '3em',
-                color: '#716add',
-                background: '#fff url(/images/trees.png)',
-                backdrop: `
-                    rgba(0,0,123,0.4)
-                    url("/images/nyan-cat.gif")
-                    left top
-                    no-repeat
-                `
-            });
+            popUp("Game over... Car made splash...");
             frogPos = { x: 6, y: 12 };
         }
     }
@@ -211,19 +203,7 @@ document.addEventListener('keydown', (e) => {
                 }
             }
             if (!onLog) {
-                Swal.fire({
-                    title: 'Game Over! You fell into the water!',
-                    width: 600,
-                    padding: '3em',
-                    color: '#716add',
-                    background: '#fff url(/images/trees.png)',
-                    backdrop: `
-                        rgba(0,0,123,0.4)
-                        url("/images/nyan-cat.gif")
-                        left top
-                        no-repeat
-                    `
-                });
+                popUp('Game Over! You fell into the water!');
                 frogPos = { x: 6, y: 12 };
             }
         }
@@ -307,3 +287,19 @@ function startPauseGame() {
         gameRunning = true;
     }
 }
+
+function levelUp() {
+    level++;
+    intervalTime *= 0.8; // increase speed by 20%
+    if (gameRunning) {
+        clearInterval(intervalID);
+        intervalID = setInterval(() => {
+            moveCars();
+            moveBirds();
+            moveWaterAndLogs();
+            updateGameBoard();
+        }, intervalTime);
+    }
+    popUp(`Welcome to level ${level}`);
+}
+
