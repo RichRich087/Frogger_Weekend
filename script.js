@@ -3,6 +3,7 @@
 let boardSize = 13;
 let frogPos = { x: 6, y: 12 };
 let intervalID;
+let outcomeTimerId;
 let gameRunning = false;
 let level = 1; // add level
 let intervalTime = 1000;
@@ -159,6 +160,34 @@ function updateGameBoard() {
     }
 }
 
+function checkOutcomes() {
+    for (let car of cars) {
+        if (car.x == frogPos.x && car.y == frogPos.y) {
+            popUp("Game over... Car made splash...");
+            frogPos = { x: 6, y: 12 };
+            clearInterval(outcomeTimerId);
+        }
+    }
+
+    for (let waterPos of water) {
+        if (waterPos.x == frogPos.x && waterPos.y == frogPos.y) {
+            let onLog = false;
+            for (let log of logs) {
+                if (log.x == frogPos.x && log.y == frogPos.y) {
+                    onLog = true;
+                    break;
+                }
+            }
+            if (!onLog) {
+                popUp('Game Over! You fell into the water!');
+                frogPos = { x: 6, y: 12 };
+                clearInterval(outcomeTimerId); // stop checking outcomes after game over
+            }
+        }
+    }
+}
+
+
 document.addEventListener('keydown', (e) => {
     switch (e.key) {
         case 'ArrowUp':
@@ -185,32 +214,10 @@ document.addEventListener('keydown', (e) => {
     if (frogPos.y >= boardSize) frogPos.y = boardSize - 1;
     if (frogPos.x < 0) frogPos.x = 0;
     if (frogPos.x >= boardSize) frogPos.x = boardSize - 1;
-
-    for (let car of cars) {
-        if (car.x == frogPos.x && car.y == frogPos.y) {
-            popUp("Game over... Car made splash...");
-            frogPos = { x: 6, y: 12 };
-        }
-    }
-
-    for (let waterPos of water) {
-        if (waterPos.x == frogPos.x && waterPos.y == frogPos.y) {
-            let onLog = false;
-            for (let log of logs) {
-                if (log.x == frogPos.x && log.y == frogPos.y) {
-                    onLog = true;
-                    break;
-                }
-            }
-            if (!onLog) {
-                popUp('Game Over! You fell into the water!');
-                frogPos = { x: 6, y: 12 };
-            }
-        }
-    }
+    checkOutcomes();
     updateGameBoard();
-});
 
+});
 createGameBoard();
 updateGameBoard();
 
@@ -283,7 +290,10 @@ function startPauseGame() {
             moveBirds();
             moveWaterAndLogs();
             updateGameBoard();
-        }, 1000);
+        }, intervalTime);
+
+        outcomeTimerId = setInterval(checkOutcomes, 50); //possibly fix issue with not dying
+
         gameRunning = true;
     }
 }
@@ -303,3 +313,4 @@ function levelUp() {
     popUp(`Welcome to level ${level}`);
 }
 
+outcomeTimerId = setInterval(checkOutcomes, 50); //possibly fix issue with not dying
