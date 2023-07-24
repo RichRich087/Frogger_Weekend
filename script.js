@@ -1,5 +1,12 @@
+
+
 let boardSize = 13;
 let frogPos = { x: 6, y: 12 };
+let intervalID;
+let gameRunning = false;
+
+let startPauseButton = document.getElementById('start-pause-button');
+startPauseButton.addEventListener('click', startPauseGame);
 
 let cars = [
     { x: 1, y: 10 },
@@ -284,9 +291,19 @@ function moveWaterAndLogs() {
 }
 
 
-setInterval(() => {
-    moveCars();
-    moveBirds();
-    moveWaterAndLogs();
-    updateGameBoard();
-}, 1000);
+function startPauseGame() {
+    if (gameRunning) {
+        // If the game is running, stop the interval and set gameRunning to false
+        clearInterval(intervalID);
+        gameRunning = false;
+    } else {
+        // If the game is not running, start the interval and set gameRunning to true
+        intervalID = setInterval(() => {
+            moveCars();
+            moveBirds();
+            moveWaterAndLogs();
+            updateGameBoard();
+        }, 1000);
+        gameRunning = true;
+    }
+}
