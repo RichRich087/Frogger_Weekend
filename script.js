@@ -169,6 +169,15 @@ function checkOutcomes() {
         }
     }
 
+    // Check if the frog collided with a bird
+    for (let bird of birds) {
+        if (bird.x == frogPos.x && bird.y == frogPos.y) {
+            popUp("Game over... Bird caught the frog...");
+            frogPos = { x: 6, y: 12 };
+            clearInterval(outcomeTimerId);
+        }
+    }
+
     for (let waterPos of water) {
         if (waterPos.x == frogPos.x && waterPos.y == frogPos.y) {
             let onLog = false;
