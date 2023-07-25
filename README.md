@@ -67,11 +67,52 @@ The game's header has a rainbow color effect, giving it a visually appealing loo
 <img width="1258" alt="image" src="https://github.com/RichRich087/Frogger_Weekend/assets/128620545/3d0d6eab-9471-4af4-b540-5a3fddad0d38">
 
 Testing
-The game has been tested on various modern web browsers to ensure compatibility. 
+The primary focus of our testing strategy for the Frogger game was to ensure that all its features were working as intended, providing the users with an intuitive and straightforward gaming experience. Each component was tested individually, and then in tandem with others, to guarantee that they interacted smoothly.
+
+Below are the key features of our project that we focused on during the testing process:
+
+Game board creation: We tested the game board creation functionality to ensure that the correct number of rows and cells were being generated.
+
+Game board update: We tested the game board update functionality to confirm that the game state was reflected correctly. This included testing the rendering of the frog, cars, birds, logs, and water.
+
+Collision detection: We verified that the game accurately detected and handled collisions between the frog and other elements. This included collisions with cars, birds, and water.
+
+Frog movement: We checked the frog movement to confirm that it followed the arrow key inputs from the user. Additionally, we ensured that the frog did not go out of bounds.
+
+Game start/pause: We tested the start and pause functionality to ensure that it correctly toggled the game state.
+
+Prompt for selecting frogs: We tested the prompt to select the frog to ensure that it appears correctly and accepts valid inputs.
+
+Game over conditions: We tested the conditions for the game to end to verify that they worked as expected. This included checking if the game ended correctly when the frog collided with a car or bird, or fell into the water.
+
+Throughout the testing process, we ran the application on different browsers including Chrome, Firefox, Safari, and Edge, and various screen sizes to make sure it provided a consistent user experience. The game performed well across all the tested browsers and screen sizes. The game works well on all screen sizes even mobile without any changes neccessary. Due to the size of the grid it is however adviced to play the game on a larger screen device.
+
+Notable bugs and issues
+Here are some of the notable bugs that we encountered during our testing:
+
+Frog moving when paused: Initially, the frog could be moved even when the game was paused. This issue was addressed by adding a condition to the keydown event listener to only allow movement when the game is running.
+
+Frog not dying when getting hit from side: Initially the frog would not die if hit from the side. We discovered that by utilizing a function to check the states every 50 milleseconds the issue was resolved:
+<img width="500" alt="image" src="https://github.com/RichRich087/Frogger_Weekend/assets/128620545/be186792-8fc3-4828-9035-597a9d9e5cc9">
+
 
 Responsive Design
 This was not neccessary. The game has a good style all the way to mobile screen sizes. Due to the size of the grid it is however adviced to play the game on a larger screen device.
 
+
+Validator Testing 
+W3C VALIDATOR
+JIGSAW VALIDATOR
+JAVASCRIPT VALIDATOR
+
+Deployment
+
+The game was deployed utilizing the Github hosting platform.
+The team followed the following steps to deploy the website:
+In the GitHub repository, navigate to the Settings tab
+From the source section drop-down menu, select the Master Branch
+Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.
+Here you can find the live link:  https://richrich087.github.io/Frogger_Weekend/
 
 
 Contributing
