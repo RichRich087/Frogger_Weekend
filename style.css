@@ -5,7 +5,9 @@
 }
 
 body {
-    background-color: #f8f9fa;
+    background-image: url('../images/jungle.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
     font-family: Arial, sans-serif;
     padding: 20px;
     color: #333;
