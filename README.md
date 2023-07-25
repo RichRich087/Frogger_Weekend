@@ -55,10 +55,17 @@ Water areas are hazardous to the frog unless the frog is standing on a log. Wate
 
 <img width="398" alt="image" src="https://github.com/RichRich087/Frogger_Weekend/assets/128620545/3fc0dd4e-6c92-4541-a88a-9fbafe8d93ca">
 
+SweetAlert2 Libray  
+We utilized this library to create a visually appealing pop up with images.  
+<img width="934" alt="image" src="https://github.com/RichRich087/Frogger_Weekend/assets/128620545/8cb9201a-16d7-4e68-bc4e-a18d4793b5db">
+
+
 Start/Pause Button  
 The "Start/Pause" button allows you to control the game's flow. Clicking the button will start or pause the game depending on its current state.  
 
 <img width="397" alt="image" src="https://github.com/RichRich087/Frogger_Weekend/assets/128620545/dacbe38a-bf30-4a2d-93b1-557007d961cc">
+
+
 
 Rainbow Header  
 The game's header has a rainbow color effect, giving it a visually appealing look.  
@@ -122,6 +129,9 @@ From the source section drop-down menu, select the Master Branch
 Once the master branch has been selected, the page will be automatically refreshed with a detailed ribbon display to indicate the successful deployment.  
 Here you can find the live link:  https://richrich087.github.io/Frogger_Weekend/  
 
+
+Media
+All images are taken from Google Images. We utilized Adobe background remover to remove the white background.
 
 Contributing  
 If you wish to contribute to this project or report any issues, please visit the GitHub repository and create a pull request or an issue.  
