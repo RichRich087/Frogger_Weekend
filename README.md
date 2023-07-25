@@ -92,7 +92,11 @@ Here are some of the notable bugs that we encountered during our testing:
 
 Frog moving when paused: Initially, the frog could be moved even when the game was paused. This issue was addressed by adding a condition to the keydown event listener to only allow movement when the game is running.
 
+<img width="359" alt="image" src="https://github.com/RichRich087/Frogger_Weekend/assets/128620545/be2dca22-ba19-4c21-a1c1-7600ef1a8302">
+
+
 Frog not dying when getting hit from side: Initially the frog would not die if hit from the side. We discovered that by utilizing a function to check the states every 50 milleseconds the issue was resolved:
+
 <img width="500" alt="image" src="https://github.com/RichRich087/Frogger_Weekend/assets/128620545/be186792-8fc3-4828-9035-597a9d9e5cc9">
 
 
@@ -104,6 +108,11 @@ Validator Testing
 W3C VALIDATOR
 JIGSAW VALIDATOR
 JAVASCRIPT VALIDATOR
+
+Unfixed Bugs
+No current bugs exist. However we do have some recommendations for future updates to the game. We could add a timer to the game to create a time limit the user has to completing the game in. This could also increase the difficulty of future levels by decreasing the time available. 
+A more elegant solution could be created for the frog selection process. 
+Outside of these recommendations we are looking at a perfect product.
 
 Deployment
 
