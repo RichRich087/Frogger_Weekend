@@ -96,6 +96,13 @@ Throughout the testing process, we ran the application on different browsers inc
 Notable bugs and issues  
 Here are some of the notable bugs that we encountered during our testing:  
 
+Codeanywhere not working:
+
+CODEANYWHERE WAS NOT FUNCTIONAL OVER THE WEEKEND. We kept incountering the following error message:  
+<img width="404" alt="image" src="https://github.com/RichRich087/Frogger_Weekend/assets/128620545/79287a66-6a50-4326-b6e3-6978b0f1fe44">  
+We decided to continue our code on visual studios and to then copy the code into code anywhere once it was working again.   
+
+
 Frog moving when paused: Initially, the frog could be moved even when the game was paused. This issue was addressed by adding a condition to the keydown event listener to only allow movement when the game is running.  
 
 <img width="359" alt="image" src="https://github.com/RichRich087/Frogger_Weekend/assets/128620545/be2dca22-ba19-4c21-a1c1-7600ef1a8302">
