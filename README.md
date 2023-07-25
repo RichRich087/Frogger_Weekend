@@ -119,8 +119,14 @@ This was not neccessary. The game has a good style all the way to mobile screen 
 
 Validator Testing   
 W3C VALIDATOR  
+<img width="1216" alt="image" src="https://github.com/RichRich087/Frogger_Weekend/assets/128620545/83847745-4089-46bb-90b2-a8c83a6d56d7">
+
 JIGSAW VALIDATOR  
+<img width="1231" alt="image" src="https://github.com/RichRich087/Frogger_Weekend/assets/128620545/fe6a7727-1d5f-4710-b208-6b2661a7d96d">
+
 JAVASCRIPT VALIDATOR  
+<img width="295" alt="image" src="https://github.com/RichRich087/Frogger_Weekend/assets/128620545/c6877746-afe9-4b12-92c8-6a5fdc26e854">
+
 
 Unfixed Bugs  
 No current bugs exist. However we do have some recommendations for future updates to the game. We could add a timer to the game to create a time limit the user has to completing the game in. This could also increase the difficulty of future levels by decreasing the time available.   
