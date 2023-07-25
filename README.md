@@ -26,6 +26,7 @@ Use the "Start/Pause" button to start or pause the game.
 Level Components
 
 Frogs
+
 You can initially choose from 4 frogs:
 
 <img width="35" alt="image" src="https://github.com/RichRich087/Frogger_Weekend/assets/128620545/7d2b1e87-6205-4397-814b-1100058cf2ac">
