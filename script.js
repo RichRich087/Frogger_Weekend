@@ -179,7 +179,7 @@ function updateGameBoard() {
     }
 }
 
-    // Check if the frog collided with a car
+// Check if the frog collided with a car
 function checkOutcomes() {
     for (let car of cars) {
         if (car.x == frogPos.x && car.y == frogPos.y) {
@@ -274,7 +274,7 @@ function moveBirds() {
             bird.x--;
             bird.counter++;
         }
-        // Else, move bird to the right and reset counter
+        // move bird to the right and reset counter
         else {
             bird.x++;
             bird.counter = 0;
@@ -303,7 +303,7 @@ function moveWaterAndLogs() {
         }
     }
 
-//move water
+    //move water
     for (let waterPos of water) {
         waterPos.x++;
 
@@ -335,6 +335,7 @@ function startPauseGame() {
     }
 }
 
+//next level function
 function levelUp() {
     level++;
     intervalTime *= 0.8; // increase speed by 20%
