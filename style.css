@@ -31,23 +31,6 @@ header h1 {
     color: transparent;
 }
 
-nav ul {
-    display: flex;
-    justify-content: center;
-    list-style-type: none;
-    margin-bottom: 20px;
-}
-
-nav ul li {
-    margin: 0 10px;
-}
-
-nav ul li a {
-    text-decoration: none;
-    color: #716add;
-    font-size: 1.2em;
-}
-
 section {
     margin-bottom: 20px;
 }

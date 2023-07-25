@@ -1,5 +1,6 @@
 
 
+//all variables used 
 let boardSize = 13;
 let frogPos = { x: 6, y: 12 };
 let intervalID;
@@ -8,10 +9,11 @@ let gameRunning = false;
 let level = 1; // add level
 let intervalTime = 1000;
 
+//eventlistener for the start pause button
 let startPauseButton = document.getElementById('start-pause-button');
 startPauseButton.addEventListener('click', startPauseGame);
 
-
+//add a cars array
 let cars = [
     { x: 1, y: 10, img: '../images/car1.png' },
     { x: 3, y: 10, img: '../images/car2.png' },
@@ -81,6 +83,7 @@ let water = [
     { x: 12, y: 5 },
 ];
 
+//add a frogs array
 let frogs = [
     { id: 1, img: '../images/frog1.png' },
     { id: 2, img: '../images/frog2.png' },
@@ -88,10 +91,11 @@ let frogs = [
     { id: 4, img: '../images/frog4.png' },
 ];
 
+//pop up message to select 1 of 4 frogs
 let selectedFrogId = parseInt(prompt("Please select a frog (enter 1, 2, 3 or 4):"));
 let selectedFrog = frogs.find(frog => frog.id === selectedFrogId);
 
-
+// create a custom popUp using SweetAlert2. is not possible to use in frog selection process.
 function popUp(title) {
     Swal.fire({
         title: title,
@@ -108,6 +112,7 @@ function popUp(title) {
     });
 }
 
+//create the game board
 function createGameBoard() {
     let gameBoard = document.getElementById('game-board');
 
@@ -131,12 +136,14 @@ function updateGameBoard() {
             let cell = gameBoard.children[i].children[j];
             cell.innerHTML = '';  // Clear the cell
 
+            // Add the frog to the game board
             if (i == frogPos.y && j == frogPos.x) {
                 let img = document.createElement('img');
                 img.src = selectedFrog.img;
                 cell.appendChild(img);
             }
 
+            // Add the cars to the game board
             for (let car of cars) {
                 if (i == car.y && j == car.x) {
                     let img = document.createElement('img');
@@ -172,6 +179,7 @@ function updateGameBoard() {
     }
 }
 
+    // Check if the frog collided with a car
 function checkOutcomes() {
     for (let car of cars) {
         if (car.x == frogPos.x && car.y == frogPos.y) {
@@ -190,6 +198,7 @@ function checkOutcomes() {
         }
     }
 
+    // Check if the frog fell into the water
     for (let waterPos of water) {
         if (waterPos.x == frogPos.x && waterPos.y == frogPos.y) {
             let onLog = false;
@@ -226,6 +235,7 @@ document.addEventListener('keydown', (e) => {
                 break;
         }
 
+        //check if you win
         if (frogPos.y < 0) {
             frogPos.y = 0;
             popUp("Congratulations! You won!");
@@ -243,6 +253,7 @@ document.addEventListener('keydown', (e) => {
 createGameBoard();
 updateGameBoard();
 
+//move car
 function moveCars() {
     for (let car of cars) {
         car.x++;
@@ -254,6 +265,8 @@ function moveCars() {
     }
 }
 
+
+//move birds
 function moveBirds() {
     for (let bird of birds) {
         // If counter is less than 2, move bird to the left
@@ -279,6 +292,7 @@ function moveBirds() {
     }
 }
 
+//move logs
 function moveWaterAndLogs() {
     for (let log of logs) {
         log.x++;
@@ -289,6 +303,7 @@ function moveWaterAndLogs() {
         }
     }
 
+//move water
     for (let waterPos of water) {
         waterPos.x++;
 
@@ -314,7 +329,7 @@ function startPauseGame() {
             updateGameBoard();
         }, intervalTime);
 
-        outcomeTimerId = setInterval(checkOutcomes, 50); //possibly fix issue with not dying
+        outcomeTimerId = setInterval(checkOutcomes, 50); // fixes issue with not dying
 
         gameRunning = true;
     }
@@ -335,4 +350,4 @@ function levelUp() {
     popUp(`Welcome to level ${level}`);
 }
 
-outcomeTimerId = setInterval(checkOutcomes, 50); //possibly fix issue with not dying
+outcomeTimerId = setInterval(checkOutcomes, 50); //fixes issue with not dying
