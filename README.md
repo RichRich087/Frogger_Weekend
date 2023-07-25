@@ -84,7 +84,7 @@ Prompt for selecting frogs: We tested the prompt to select the frog to ensure th
 
 Game over conditions: We tested the conditions for the game to end to verify that they worked as expected. This included checking if the game ended correctly when the frog collided with a car or bird, or fell into the water.  
 
-Throughout the testing process, we ran the application on different browsers including Chrome, Firefox, Safari, and Edge, and various screen sizes to make sure it provided a consistent user experience. The game performed well across all the tested browsers and screen sizes. The game works well on all screen sizes even mobile without any changes neccessary. Due to the size of the grid it is however adviced to play the game on a larger screen device.  
+Throughout the testing process, we ran the application on different browsers including Chrome, Firefox, Safari, and Edge, and various screen sizes to make sure it provided a consistent user experience. The game performed well across all the tested browsers. The game works well on all screen sizes even mobile without any changes neccessary. Due to the size of the grid it is however adviced to play the game on a larger screen device.  
 
 Notable bugs and issues  
 Here are some of the notable bugs that we encountered during our testing:  
