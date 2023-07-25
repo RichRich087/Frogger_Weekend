@@ -15,53 +15,53 @@ startPauseButton.addEventListener('click', startPauseGame);
 
 //add a cars array
 let cars = [
-    { x: 1, y: 10, img: '/images/car1.png' },
-    { x: 3, y: 10, img: '/images/car2.png' },
-    { x: 4, y: 10, img: '/images/car3.png' },
-    { x: 8, y: 10, img: '/images/car4.png' },
-    { x: 10, y: 10, img: '/images/car5.png' },
-    { x: 2, y: 9, img: '/images/car1.png' },
-    { x: 4, y: 9, img: '/images/car2.png' },
-    { x: 7, y: 9, img: '/images/car3.png' },
-    { x: 11, y: 9, img: '/images/car4.png' },
-    { x: 12, y: 9, img: '/images/car5.png' },
-    { x: 0, y: 8, img: '/images/car1.png' },
-    { x: 3, y: 8, img: '/images/car2.png' },
-    { x: 6, y: 8, img: '/images/car3.png' },
-    { x: 9, y: 8, img: '/images/car4.png' }
+    { x: 1, y: 10, img: 'images/car1.png' },
+    { x: 3, y: 10, img: 'images/car2.png' },
+    { x: 4, y: 10, img: 'images/car3.png' },
+    { x: 8, y: 10, img: 'images/car4.png' },
+    { x: 10, y: 10, img: 'images/car5.png' },
+    { x: 2, y: 9, img: 'images/car1.png' },
+    { x: 4, y: 9, img: 'images/car2.png' },
+    { x: 7, y: 9, img: 'images/car3.png' },
+    { x: 11, y: 9, img: 'images/car4.png' },
+    { x: 12, y: 9, img: 'images/car5.png' },
+    { x: 0, y: 8, img: 'images/car1.png' },
+    { x: 3, y: 8, img: 'images/car2.png' },
+    { x: 6, y: 8, img: 'images/car3.png' },
+    { x: 9, y: 8, img: 'images/car4.png' }
 ];
 
 // Add a birds array
 let birds = [
-    { x: 1, y: 3, counter: 0, img: '/images/bird1.png' },
-    { x: 4, y: 3, counter: 0, img: '/images/bird1.png' },
-    { x: 5, y: 3, counter: 0, img: '/images/bird2.png' },
-    { x: 8, y: 3, counter: 0, img: '/images/bird1.png' },
-    { x: 10, y: 3, counter: 0, img: '/images/bird1.png' },
-    { x: 12, y: 3, counter: 0, img: '/images/bird2.png' },
-    { x: 2, y: 2, counter: 0, img: '/images/bird1.png' },
-    { x: 3, y: 2, counter: 0, img: '/images/bird2.png' },
-    { x: 5, y: 2, counter: 0, img: '/images/bird2.png' },
-    { x: 6, y: 2, counter: 0, img: '/images/bird2.png' },
-    { x: 8, y: 2, counter: 0, img: '/images/bird1.png' },
-    { x: 9, y: 2, counter: 0, img: '/images/bird1.png' }
+    { x: 1, y: 3, counter: 0, img: 'images/bird1.png' },
+    { x: 4, y: 3, counter: 0, img: 'images/bird1.png' },
+    { x: 5, y: 3, counter: 0, img: 'images/bird2.png' },
+    { x: 8, y: 3, counter: 0, img: 'images/bird1.png' },
+    { x: 10, y: 3, counter: 0, img: 'images/bird1.png' },
+    { x: 12, y: 3, counter: 0, img: 'images/bird2.png' },
+    { x: 2, y: 2, counter: 0, img: 'images/bird1.png' },
+    { x: 3, y: 2, counter: 0, img: 'images/bird2.png' },
+    { x: 5, y: 2, counter: 0, img: 'images/bird2.png' },
+    { x: 6, y: 2, counter: 0, img: 'images/bird2.png' },
+    { x: 8, y: 2, counter: 0, img: 'images/bird1.png' },
+    { x: 9, y: 2, counter: 0, img: 'images/bird1.png' }
 ];
 
 // Add a logs array
 let logs = [
-    { x: 1, y: 6, img: '/images/log.png' },
-    { x: 2, y: 6, img: '/images/log.png' },
-    { x: 3, y: 6, img: '/images/log.png' },
-    { x: 7, y: 6, img: '/images/log.png' },
-    { x: 8, y: 6, img: '/images/log.png' },
-    { x: 9, y: 6, img: '/images/log.png' },
+    { x: 1, y: 6, img: 'images/log.png' },
+    { x: 2, y: 6, img: 'images/log.png' },
+    { x: 3, y: 6, img: 'images/log.png' },
+    { x: 7, y: 6, img: 'images/log.png' },
+    { x: 8, y: 6, img: 'images/log.png' },
+    { x: 9, y: 6, img: 'images/log.png' },
 
-    { x: 2, y: 5, img: '/images/log1.png' },
-    { x: 3, y: 5, img: '/images/log1.png' },
-    { x: 4, y: 5, img: '/images/log1.png' },
-    { x: 8, y: 5, img: '/images/log1.png' },
-    { x: 9, y: 5, img: '/images/log1.png' },
-    { x: 10, y: 5, img: '/images/log1.png' }
+    { x: 2, y: 5, img: 'images/log1.png' },
+    { x: 3, y: 5, img: 'images/log1.png' },
+    { x: 4, y: 5, img: 'images/log1.png' },
+    { x: 8, y: 5, img: 'images/log1.png' },
+    { x: 9, y: 5, img: 'images/log1.png' },
+    { x: 10, y: 5, img: 'images/log1.png' }
 ];
 
 // Add a water array
@@ -85,10 +85,10 @@ let water = [
 
 //add a frogs array
 let frogs = [
-    { id: 1, img: '/images/frog1.png' },
-    { id: 2, img: '/images/frog2.png' },
-    { id: 3, img: '/images/frog3.png' },
-    { id: 4, img: '/images/frog4.png' },
+    { id: 1, img: 'images/frog1.png' },
+    { id: 2, img: 'images/frog2.png' },
+    { id: 3, img: 'images/frog3.png' },
+    { id: 4, img: 'images/frog4.png' },
 ];
 
 //pop up message to select 1 of 4 frogs
@@ -179,7 +179,7 @@ function updateGameBoard() {
     }
 }
 
-    // Check if the frog collided with a car
+// Check if the frog collided with a car
 function checkOutcomes() {
     for (let car of cars) {
         if (car.x == frogPos.x && car.y == frogPos.y) {
@@ -303,7 +303,7 @@ function moveWaterAndLogs() {
         }
     }
 
-//move water
+    //move water
     for (let waterPos of water) {
         waterPos.x++;
 

@@ -5,7 +5,7 @@
 }
 
 body {
-    background-image: url('/images/jungle.jpg');
+    background-image: url('images/jungle.jpg');
     background-repeat: no-repeat;
     background-size: cover;
     font-family: Arial, sans-serif;
