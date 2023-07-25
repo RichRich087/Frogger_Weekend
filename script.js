@@ -31,28 +31,28 @@ let cars = [
 
 // Add a birds array
 let birds = [
-    { x: 1, y: 3, counter: 0, img: '../images/bird1.jpg' },
-    { x: 4, y: 3, counter: 0, img: '../images/bird1.jpg' },
-    { x: 5, y: 3, counter: 0, img: '../images/bird2.jpg' },
-    { x: 8, y: 3, counter: 0, img: '../images/bird1.jpg' },
-    { x: 10, y: 3, counter: 0, img: '../images/bird1.jpg' },
-    { x: 12, y: 3, counter: 0, img: '../images/bird2.jpg' },
-    { x: 2, y: 2, counter: 0, img: '../images/bird1.jpg' },
-    { x: 3, y: 2, counter: 0, img: '../images/bird2.jpg' },
-    { x: 5, y: 2, counter: 0, img: '../images/bird2.jpg' },
-    { x: 6, y: 2, counter: 0, img: '../images/bird2.jpg' },
-    { x: 8, y: 2, counter: 0, img: '../images/bird1.jpg' },
-    { x: 9, y: 2, counter: 0, img: '../images/bird1.jpg' }
+    { x: 1, y: 3, counter: 0, img: '../images/bird1.png' },
+    { x: 4, y: 3, counter: 0, img: '../images/bird1.png' },
+    { x: 5, y: 3, counter: 0, img: '../images/bird2.png' },
+    { x: 8, y: 3, counter: 0, img: '../images/bird1.png' },
+    { x: 10, y: 3, counter: 0, img: '../images/bird1.png' },
+    { x: 12, y: 3, counter: 0, img: '../images/bird2.png' },
+    { x: 2, y: 2, counter: 0, img: '../images/bird1.png' },
+    { x: 3, y: 2, counter: 0, img: '../images/bird2.png' },
+    { x: 5, y: 2, counter: 0, img: '../images/bird2.png' },
+    { x: 6, y: 2, counter: 0, img: '../images/bird2.png' },
+    { x: 8, y: 2, counter: 0, img: '../images/bird1.png' },
+    { x: 9, y: 2, counter: 0, img: '../images/bird1.png' }
 ];
 
 // Add a logs array
 let logs = [
-    { x: 1, y: 6, img: '../images/log.jpg' },
-    { x: 2, y: 6, img: '../images/log.jpg' },
-    { x: 3, y: 6, img: '../images/log.jpg' },
-    { x: 7, y: 6, img: '../images/log.jpg' },
-    { x: 8, y: 6, img: '../images/log.jpg' },
-    { x: 9, y: 6, img: '../images/log.jpg' },
+    { x: 1, y: 6, img: '../images/log.png' },
+    { x: 2, y: 6, img: '../images/log.png' },
+    { x: 3, y: 6, img: '../images/log.png' },
+    { x: 7, y: 6, img: '../images/log.png' },
+    { x: 8, y: 6, img: '../images/log.png' },
+    { x: 9, y: 6, img: '../images/log.png' },
 
     { x: 2, y: 5, img: '../images/log1.png' },
     { x: 3, y: 5, img: '../images/log1.png' },
@@ -83,9 +83,9 @@ let water = [
 
 let frogs = [
     { id: 1, img: '../images/frog1.png' },
-    { id: 2, img: '../images/frog2.jpg' },
-    { id: 3, img: '../images/frog3.jpg' },
-    { id: 4, img: '../images/frog4.jpg' },
+    { id: 2, img: '../images/frog2.png' },
+    { id: 3, img: '../images/frog3.png' },
+    { id: 4, img: '../images/frog4.png' },
 ];
 
 let selectedFrogId = parseInt(prompt("Please select a frog (enter 1, 2, 3 or 4):"));
