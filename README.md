@@ -1,33 +1,32 @@
 
-Frogger - The Game
+Frogger - The Game  
 
-Welcome to Frogger - The Game! This is a classic arcade-style game where you control a frog and help it cross a busy road, avoid dangerous obstacles, and reach its destination safely. Your goal is to guide the frog to the top row of the game board without getting hit by cars or caught by birds. Are you up for the challenge?
+Welcome to Frogger - The Game! This is a classic arcade-style game where you control a frog and help it cross a busy road, avoid dangerous obstacles, and reach its destination safely. Your goal is to guide the frog to the top row of the game board without getting hit by cars or caught by birds. Are you up for the challenge?  
 
-Table of Contents
-Introduction
-Game Overview
-How to Play
-Level Components
-Start/Pause Button
-Testing
-Rainbow Header
-Contributing
-License
-Game Overview
-Frogger is a classic arcade game where you control a frog using arrow keys to navigate through the game board. The objective is to guide the frog safely to the top row, represented by the "safe zone," without getting hit by cars or caught by birds. The game board consists of a grid with various moving cars, birds, logs, and water areas.
+Table of Contents  
+Introduction  
+Game Overview  
+How to Play  
+Level Components  
+Start/Pause Button  
+Testing  
+Rainbow Header  
+Contributing  
+License  
+Game Overview  
+Frogger is a classic arcade game where you control a frog using arrow keys to navigate through the game board. The objective is to guide the frog safely to the top row, represented by the "safe zone," without getting hit by cars or caught by birds. The game board consists of a grid with various moving cars, birds, logs, and water areas.  
 
-How to Play
-You will see the game board with a frog at the bottom row.
-Use the arrow keys (Up, Down, Left, Right) to move the frog in the respective direction.
-Avoid colliding with cars or birds, as they will end the game.
-Jump on logs to cross the water areas safely.
-Reach the top row to win the game and proceed to the next level.
-Use the "Start/Pause" button to start or pause the game.
-Level Components
+How to Play  
+You will see the game board with a frog at the bottom row.  
+Use the arrow keys (Up, Down, Left, Right) to move the frog in the respective direction.  
+Avoid colliding with cars or birds, as they will end the game.  
+Jump on logs to cross the water areas safely.  
+Reach the top row to win the game and proceed to the next level.  
+Use the "Start/Pause" button to start or pause the game.  
+Level Components  
 
-Frogs
-
-You can initially choose from 4 frogs:
+Frogs  
+You can initially choose from 4 frogs:  
 
 <img width="35" alt="image" src="https://github.com/RichRich087/Frogger_Weekend/assets/128620545/7d2b1e87-6205-4397-814b-1100058cf2ac">
 <img width="32" alt="image" src="https://github.com/RichRich087/Frogger_Weekend/assets/128620545/0565faed-a991-42a9-a97d-97e04278727c">
