@@ -14,6 +14,7 @@ Rainbow Header
 Contributing  
 License  
 
+
 Game Overview  
 Frogger is a classic arcade game where you control a frog using arrow keys to navigate through the game board. The objective is to guide the frog safely to the top row, represented by the "safe zone," without getting hit by cars or caught by birds. The game board consists of a grid with various moving cars, birds, logs, and water areas.  
 
