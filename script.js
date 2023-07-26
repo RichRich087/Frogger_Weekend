@@ -15,53 +15,53 @@ startPauseButton.addEventListener('click', startPauseGame);
 
 //add a cars array
 let cars = [
-    { x: 1, y: 10, img: 'images/car1.png' },
-    { x: 3, y: 10, img: 'images/car2.png' },
-    { x: 4, y: 10, img: 'images/car3.png' },
-    { x: 8, y: 10, img: 'images/car4.png' },
-    { x: 10, y: 10, img: 'images/car5.png' },
-    { x: 2, y: 9, img: 'images/car1.png' },
-    { x: 4, y: 9, img: 'images/car2.png' },
-    { x: 7, y: 9, img: 'images/car3.png' },
-    { x: 11, y: 9, img: 'images/car4.png' },
-    { x: 12, y: 9, img: 'images/car5.png' },
-    { x: 0, y: 8, img: 'images/car1.png' },
-    { x: 3, y: 8, img: 'images/car2.png' },
-    { x: 6, y: 8, img: 'images/car3.png' },
-    { x: 9, y: 8, img: 'images/car4.png' }
+    { x: 1, y: 10, img: 'images/car1.png', alt: "Car 1" },
+    { x: 3, y: 10, img: 'images/car2.png', alt: "Car 2" },
+    { x: 4, y: 10, img: 'images/car3.png', alt: "Car 3" },
+    { x: 8, y: 10, img: 'images/car4.png', alt: "Car 4" },
+    { x: 10, y: 10, img: 'images/car5.png', alt: "Car 5" },
+    { x: 2, y: 9, img: 'images/car1.png', alt: "Car 1" },
+    { x: 4, y: 9, img: 'images/car2.png', alt: "Car 2" },
+    { x: 7, y: 9, img: 'images/car3.png', alt: "Car 3" },
+    { x: 11, y: 9, img: 'images/car4.png', alt: "Car 4" },
+    { x: 12, y: 9, img: 'images/car5.png', alt: "Car 5" },
+    { x: 0, y: 8, img: 'images/car1.png', alt: "Car 1" },
+    { x: 3, y: 8, img: 'images/car2.png', alt: "Car 2" },
+    { x: 6, y: 8, img: 'images/car3.png', alt: "Car 3" },
+    { x: 9, y: 8, img: 'images/car4.png', alt: "Car 4" }
 ];
 
 // Add a birds array
 let birds = [
-    { x: 1, y: 3, counter: 0, img: 'images/bird1.png' },
-    { x: 4, y: 3, counter: 0, img: 'images/bird1.png' },
-    { x: 5, y: 3, counter: 0, img: 'images/bird2.png' },
-    { x: 8, y: 3, counter: 0, img: 'images/bird1.png' },
-    { x: 10, y: 3, counter: 0, img: 'images/bird1.png' },
-    { x: 12, y: 3, counter: 0, img: 'images/bird2.png' },
-    { x: 2, y: 2, counter: 0, img: 'images/bird1.png' },
-    { x: 3, y: 2, counter: 0, img: 'images/bird2.png' },
-    { x: 5, y: 2, counter: 0, img: 'images/bird2.png' },
-    { x: 6, y: 2, counter: 0, img: 'images/bird2.png' },
-    { x: 8, y: 2, counter: 0, img: 'images/bird1.png' },
-    { x: 9, y: 2, counter: 0, img: 'images/bird1.png' }
+    { x: 1, y: 3, counter: 0, img: 'images/bird1.png', alt: "bird  1" },
+    { x: 4, y: 3, counter: 0, img: 'images/bird1.png', alt: "bird  1" },
+    { x: 5, y: 3, counter: 0, img: 'images/bird2.png', alt: "bird  2" },
+    { x: 8, y: 3, counter: 0, img: 'images/bird1.png', alt: "bird  2" },
+    { x: 10, y: 3, counter: 0, img: 'images/bird1.png', alt: "bird  1" },
+    { x: 12, y: 3, counter: 0, img: 'images/bird2.png', alt: "bird  2" },
+    { x: 2, y: 2, counter: 0, img: 'images/bird1.png', alt: "bird  1" },
+    { x: 3, y: 2, counter: 0, img: 'images/bird2.png', alt: "bird  2" },
+    { x: 5, y: 2, counter: 0, img: 'images/bird2.png', alt: "bird  2" },
+    { x: 6, y: 2, counter: 0, img: 'images/bird2.png', alt: "bird  2" },
+    { x: 8, y: 2, counter: 0, img: 'images/bird1.png', alt: "bird  1" },
+    { x: 9, y: 2, counter: 0, img: 'images/bird1.png', alt: "bird  1" }
 ];
 
 // Add a logs array
 let logs = [
-    { x: 1, y: 6, img: 'images/log.png' },
-    { x: 2, y: 6, img: 'images/log.png' },
-    { x: 3, y: 6, img: 'images/log.png' },
-    { x: 7, y: 6, img: 'images/log.png' },
-    { x: 8, y: 6, img: 'images/log.png' },
-    { x: 9, y: 6, img: 'images/log.png' },
+    { x: 1, y: 6, img: 'images/log.png', alt: "log" },
+    { x: 2, y: 6, img: 'images/log.png', alt: "log" },
+    { x: 3, y: 6, img: 'images/log.png', alt: "log" },
+    { x: 7, y: 6, img: 'images/log.png', alt: "log" },
+    { x: 8, y: 6, img: 'images/log.png', alt: "log" },
+    { x: 9, y: 6, img: 'images/log.png', alt: "log" },
 
-    { x: 2, y: 5, img: 'images/log1.png' },
-    { x: 3, y: 5, img: 'images/log1.png' },
-    { x: 4, y: 5, img: 'images/log1.png' },
-    { x: 8, y: 5, img: 'images/log1.png' },
-    { x: 9, y: 5, img: 'images/log1.png' },
-    { x: 10, y: 5, img: 'images/log1.png' }
+    { x: 2, y: 5, img: 'images/log1.png', alt: "log 1" },
+    { x: 3, y: 5, img: 'images/log1.png', alt: "log 1" },
+    { x: 4, y: 5, img: 'images/log1.png', alt: "log 1" },
+    { x: 8, y: 5, img: 'images/log1.png', alt: "log 1" },
+    { x: 9, y: 5, img: 'images/log1.png', alt: "log 1" },
+    { x: 10, y: 5, img: 'images/log1.png', alt: "log 1" }
 ];
 
 // Add a water array
@@ -85,10 +85,10 @@ let water = [
 
 //add a frogs array
 let frogs = [
-    { id: 1, img: 'images/frog1.png' },
-    { id: 2, img: 'images/frog2.png' },
-    { id: 3, img: 'images/frog3.png' },
-    { id: 4, img: 'images/frog4.png' },
+    { id: 1, img: 'images/frog1.png', alt: "frog 1" },
+    { id: 2, img: 'images/frog2.png', alt: "frog 2" },
+    { id: 3, img: 'images/frog3.png', alt: "frog 3" },
+    { id: 4, img: 'images/frog4.png', alt: "frog 4" },
 ];
 
 //pop up message to select 1 of 4 frogs
