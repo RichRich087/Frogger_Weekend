@@ -127,6 +127,13 @@ JIGSAW VALIDATOR
 JAVASCRIPT VALIDATOR  
 <img width="295" alt="image" src="https://github.com/RichRich087/Frogger_Weekend/assets/128620545/c6877746-afe9-4b12-92c8-6a5fdc26e854">
 
+Lighthouse  
+<img width="368" alt="image" src="https://github.com/RichRich087/Frogger_Weekend/assets/128620545/09658e54-eddb-4590-a0d0-f3280d67c302">  
+Not correct as images have alts. Also I disagree on the analysis of the button I believe it is very clear.
+<img width="353" alt="image" src="https://github.com/RichRich087/Frogger_Weekend/assets/128620545/fce6670d-f591-4380-bd4f-033fe3cebf85">  
+<img width="357" alt="image" src="https://github.com/RichRich087/Frogger_Weekend/assets/128620545/3671cd1e-df7a-4467-95ce-cc0c74042b66">  
+ 
+
 
 Unfixed Bugs  
 No current bugs exist. However we do have some recommendations for future updates to the game. We could add a timer to the game to create a time limit the user has to completing the game in. This could also increase the difficulty of future levels by decreasing the time available.   
